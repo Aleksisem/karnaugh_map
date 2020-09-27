@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="kmapMainViewModel"
+            type="com.example.karnaughmap.main.KmapMainViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+
+        <TableLayout
+            android:id="@+id/kmap_table"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/expression_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_expression"
+                android:inputType="text|textNoSuggestions"
+                android:text="@={kmapMainViewModel.expressionLong}" />
+
+            <Button
+                android:id="@+id/expression_build_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:onClick="@{() -> kmapMainViewModel.buildKmap()}"
+                android:text="@string/kmap_build" />
+
+            <EditText
+                android:id="@+id/short_expression_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:hint="@string/enter_short_expression"
+                android:inputType="text|textNoSuggestions"
+                android:text="@={kmapMainViewModel.expressionShort}" />
+
+            <Button
+                android:id="@+id/save_result_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="@{kmapMainViewModel.kmap != null}"
+                android:onClick="@{() -> kmapMainViewModel.saveMap()}"
+                android:text="@string/save_result" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

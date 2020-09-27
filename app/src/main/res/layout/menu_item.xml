@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/expression_layout"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0f0f0"
+    android:layout_margin="@dimen/margin"
+    android:padding="@dimen/padding_small">
+
+    <TextView
+        android:id="@+id/expression_long_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:text=""
+        tools:text="ДНФ: ab'c'd'+abcd'+abcde+abcde+abcde+abcde+abcde+abcde+abcde"
+        />
+    <TextView
+        android:id="@+id/expression_short_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:text=""
+        tools:text="СДНФ: abc+a'b'c'" />
+
+</LinearLayout>
+

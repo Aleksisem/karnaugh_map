@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Карты Карно</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="password_again">Подтвердите пароль</string>
+    <string name="activity_login_button">Войти</string>
+    <string name="title_activity_login">Вход</string>
+    <string name="title_activity_registration">Регистрация</string>
+    <string name="enter_expression">Логическое выражение в СДНФ</string>
+    <string name="kmap_build">Построить</string>
+    <string name="enter_short_expression">Сокращенное логическое выражение</string>
+    <string name="save_result">Сохранить результат</string>
+    <string name="incorrect_user">Неверный логин/пароль!</string>
+    <string name="expression_hint">abc+a\'b\'c\'</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="expression_long_placeholder">ДНФ: </string>
+    <string name="expression_short_placeholder">СДНФ: </string>
+    <string name="title_about_fragment">О программе</string>
+    <string name="about_text">Данная программа производит построение карты Карно на основании введённого логического выражения в виде ДНФ.\n\n
+        Полное логическое выражение записывается в следующем виде:\n
+        - В каждой элементарной конъюнкции переменные должны быть записаны в правильном порядке без повторения\n
+        - Для обозначения инверсии после переменной необходимо поставить символ амперсанда \'\n\n
+        Примеры логических выражений:\n\n
+        abc+ab\'c\'+abc\'+a\'b\'c\'\n
+        ab+a\'b\'\n
+        abcd+abc\'d\'+ab\'c\'d+a\'b\'c\'d\'
+
+        </string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="registrationViewModel"
+            type="com.example.karnaughmap.signup.RegistrationViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding"
+        android:paddingEnd="@dimen/padding"
+        android:paddingTop="@dimen/padding_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:text="@string/title_activity_registration"
+            android:textSize="@dimen/logoTextSize"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/username_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/password_edit"
+            android:layout_marginBottom="@dimen/margin"
+            android:hint="@string/login"
+            android:text="@={registrationViewModel.login}"
+            android:inputType="text"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/textSize" />
+
+        <EditText
+            android:id="@+id/password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_centerInParent="true"
+            android:hint="@string/password"
+            android:text="@={registrationViewModel.password}"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding"
+            android:textSize="@dimen/textSize" />
+
+
+        <Button
+            android:id="@+id/registration_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_below="@id/password_edit"
+            android:onClick="@{() -> registrationViewModel.addNewUser()}"
+            android:text="@string/title_activity_registration" />
+
+    </RelativeLayout>
+
+</layout>
