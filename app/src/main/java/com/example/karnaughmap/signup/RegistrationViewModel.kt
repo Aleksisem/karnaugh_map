@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.karnaughmap.KmapRepository
+import com.example.karnaughmap.Utils
 import com.example.karnaughmap.database.KmapDatabase.Companion.getDatabase
 import com.example.karnaughmap.database.User
 
@@ -36,7 +37,8 @@ class RegistrationViewModel(application: Application) : AndroidViewModel(applica
             if (userExist(l)) {
                 isUserExist.value = true
             } else {
-                userRepository.insertUser(User(0, l, p))
+                val hash = Utils.hash(p)
+                userRepository.insertUser(User(0, l, hash))
                 actionToLogin()
             }
         }

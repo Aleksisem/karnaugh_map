@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.karnaughmap.KmapRepository
+import com.example.karnaughmap.Utils
 import com.example.karnaughmap.database.KmapDatabase.Companion.getDatabase
 import com.example.karnaughmap.database.User
 
@@ -37,7 +38,8 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
             Log.i("LoginViewModel", "NO USER")
         }
         if (user != null) {
-            if (user.password == password.value!!) {
+            val hash = Utils.hash(password.value!!)
+            if (user.password == hash) {
                 authorizeUser(user)
             } else {
                 // Ошибка (неверные данные)

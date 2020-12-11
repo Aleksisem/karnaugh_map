@@ -5,19 +5,14 @@ import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.karnaughmap.R
-import com.example.karnaughmap.database.Expression
 import com.example.karnaughmap.databinding.MenuFragmentBinding
-import kotlinx.android.synthetic.main.menu_fragment.*
-import kotlinx.android.synthetic.main.menu_fragment.view.*
 
 class MenuFragment : Fragment() {
 

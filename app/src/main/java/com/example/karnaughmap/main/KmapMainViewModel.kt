@@ -3,16 +3,12 @@ package com.example.karnaughmap.main
 import android.app.Application
 import android.net.Uri
 import android.util.Log
-import android.view.View
-import androidx.core.view.drawToBitmap
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.example.karnaughmap.KmapRepository
 import com.example.karnaughmap.database.Expression
 import com.example.karnaughmap.database.KmapDatabase.Companion.getDatabase
-import com.example.kmaps.Kmap
-import java.io.File
+import com.example.karnaughmap.Kmap
 
 class KmapMainViewModel(application: Application, private val userId: Int) : AndroidViewModel(application) {
 

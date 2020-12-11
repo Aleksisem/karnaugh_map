@@ -19,7 +19,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
 import com.example.karnaughmap.R
 import com.example.karnaughmap.databinding.KmapMainFragmentBinding
-import com.example.kmaps.Kmap
+import com.example.karnaughmap.Kmap
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException

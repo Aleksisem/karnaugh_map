@@ -1,6 +1,5 @@
-package com.example.kmaps
+package com.example.karnaughmap
 
-import android.util.Log
 import kotlin.math.pow
 
 class Kmap(expression: String) {
